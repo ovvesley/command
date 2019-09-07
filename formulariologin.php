@@ -1,29 +1,19 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="utf-8">
-        <title>Login</title>
+<div class="card">
 
-    </head>
-    <body>
-        <div >
-            <nav>
-            </nav>
-            <section>
-                <h1>Login de Usuário</h1>
-                <hr><br><br>
+    <div class="card-body">
 
-                <form method="post" action="login.php">
+        <h2 class="card-title m-2">Login</h2>
 
-                    E-mail<br>
-                    <input type="email" placeholder="digite seu e-mail" name="email" ><br>
-                    Senha<br>
-                    <input type="password" placeholder="digite sua senha" name="senha"><br> 
-                     <br><br>
-                     <input type="submit" value="Salvar" class="btn">
-                   
-                </form>
-            </section>
-        </div>
-    </body>
-</html>
+
+        <form method="post" action="login.php" class="m-3 p-3">
+            E-mail<br>
+            <input type="email" class="form-control" placeholder="digite seu e-mail" name="email"><br>
+            Senha<br>
+            <input type="password" class="form-control" placeholder="digite sua senha" name="senha"><br>
+            <br><br>
+            <hr>
+            <input type="submit" class="btn btn-primary btn" value="Salvar">
+        </form>
+    </div>
+
+</div>
