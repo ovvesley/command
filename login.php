@@ -13,5 +13,5 @@ if (mysql_db_query_fetch_array("SELECT * FROM Usuario WHERE email ='$email' AND 
 }
 if ($login) {
     $_SESSION['USER_INFO'] = fetch_user($username);
-    header("location: ../inicio.php");
+    header("location: ./inicio.php");
 }
