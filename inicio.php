@@ -25,11 +25,13 @@ require "PublicacaoComponent.php";
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
+    <ul class="navbar-nav ">
+      <li class="nav-item ">
         <a class="nav-link" href="#">Add <span class="sr-only">(current)</span></a>
       </li>
-      
+      <li class="nav-item ">
+        <a class="nav-link" href="#">Fazer Logout <span class="sr-only">(current)</span></a>
+      </li>
     </ul>
   </div>
 </nav>
