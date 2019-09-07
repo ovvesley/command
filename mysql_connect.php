@@ -20,11 +20,11 @@ function mysql_db_query_fetch_array($query)
     return mysqli_fetch_array(mysql_db_query($query));
 }
 
-function fetch_user($email)
+function pegar_usuario($email)
 {
     $arr = mysql_db_query_fetch_array("SELECT * FROM Usuario WHERE email ='$email'");
     return array(
-        "idUser" => intval($arr['idUsuario']),
+        "idUsuario" => intval($arr['idUsuario']),
         "nome" => $arr['nome'],
         "email" => $arr['email'],
     );
