@@ -27,9 +27,9 @@ require "PublicacaoComponent.php";
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Add <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#"  data-toggle="modal" data-target="#modalAddPublicacao">Add <span class="sr-only">(current)</span></a>
       </li>
-      
+
     </ul>
   </div>
 </nav>
@@ -39,13 +39,35 @@ require "PublicacaoComponent.php";
 
     <div class="row">
     <?php
-        for ($i = 0; $i < 5; $i++) {
-            mostrarPublicacao("Instalar o Git no Linux", "sudo apt install git");
-        }
-    ?>
+for ($i = 0; $i < 5; $i++) {
+    mostrarPublicacao("Instalar o Git no Linux", "sudo apt install git");
+}
+?>
     </div>
 
 </div>
+
+
+<div class="modal fade" id="modalAddPublicacao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Adicionar Comando</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <?php require ("./formulariopublicacao.php")  ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Salvar mudanças</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="lib/js/jquery-3.4.1.min.js"></script>
     <script src="lib/js/bootstrap.min.js"></script>
     <script src="lib/js/popper.min.js"></script>
