@@ -12,7 +12,7 @@
             <input type="password" class="form-control" placeholder="digite sua senha" name="senha"><br>
             <br><br>
             <hr>
-            <input type="submit" class="btn btn-primary btn" value="Salvar" class="btn">
+            <input type="submit" class="btn btn-primary btn" value="Salvar">
         </form>
     </div>
 
