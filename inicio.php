@@ -31,8 +31,11 @@ require "PublicacaoComponent.php";
         <a class="nav-link" href="#"  data-toggle="modal" data-target="#modalAddPublicacao">Add <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="#">Fazer Logout <span class="sr-only">(current)</span></a>
-      </li>
+          <form action="sairsessao.php">
+            <button type="submit" class="nav-link" >Fazer Logout <span class="sr-only"></span></button>
+          
+        </form>
+    </li>
 
     </ul>
   </div>
