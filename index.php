@@ -15,9 +15,7 @@
 </head>
 
 <body>
-
-
-
+    
     <div class="container login-container">
         <div class="row">
             <div class="col-md-6 login-form-1">
@@ -35,10 +33,7 @@
                     <div class="form-group">
                         <input type="submit" class="btnSubmit" value="Login" />
                     </div>
-                    <div class="form-group">
-
-                        <a href="#" class="ForgetPwd" value="Login">Forget Password?</a>
-                    </div>
+                 
                 </form>
             </div>
         </div>
