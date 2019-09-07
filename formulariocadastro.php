@@ -7,7 +7,7 @@
 
         <form method="post" action="cadastro.php" class="m-3 p-3">
             Nome<br>
-            <input type="name" class="form-control" placeholder="digite seu e-mail" name="email"><br>
+            <input type="name" class="form-control" placeholder="digite seu nome" name="nome"><br>
             E-mail<br>
             <input type="email" class="form-control" placeholder="digite seu e-mail" name="email"><br>
             Senha<br>

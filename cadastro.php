@@ -5,7 +5,7 @@ $email = $_POST["email"];
 $senha = $_POST["senha"];
 $confsenha = $_POST["confsenha"];
 $nome = $_POST["nome"];
-
+var_dump($_POST);
 
 
 function mysqli_conecta_verifica($query)
@@ -22,7 +22,8 @@ if (!$result) {
     echo "Ocorreu um erro";
 } else {
     $array = mysqli_fetch_array($result);
-    if ($array['email'] = $email) {
+    var_dump($array);
+    if ($array['email'] == $email) {
         echo "E-mail já existe. Use outro e-mail";
     } else {
         if ($senha == $confsenha) {
