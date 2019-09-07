@@ -9,9 +9,9 @@ if (mysql_db_query_fetch_array("SELECT * FROM Usuario WHERE email ='$email' AND 
     $_SESSION["error"] = "Usuario não cadastrado. ;(";
     $login = false;
     echo("Erro!!");
-    // header("location: ../index.php");
+    header("location: ../index.php");
 }
 if ($login) {
-    $_SESSION['USER_INFO'] = fetch_user($username);
+    $_SESSION['USER_INFO'] = fetch_user($email);
     header("location: ./inicio.php");
 }
