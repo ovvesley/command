@@ -11,7 +11,7 @@ $nome = $_POST["nome"];
 function mysqli_conecta_verifica($query)
 {
     require("credencial.php");
-    $con = mysql_connect($host, $usuario, $senha, $database);
+    $con = mysqli_connect($host, $usuario, $senha, $database);
     $result = mysqli_query($con, $query); //buscou e colocou o erro nessa variavel
     return $result;
 }
