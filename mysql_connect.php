@@ -19,6 +19,10 @@ function mysql_db_query_fetch_array($query)
 {    
     return mysqli_fetch_array(mysql_db_query($query));
 }
+function mysql_db_query_fetch_assoc($query)
+{    
+    return mysqli_fetch_assoc(mysql_db_query($query));
+}
 
 function pegar_usuario($email)
 {

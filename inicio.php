@@ -43,9 +43,19 @@ require "PublicacaoComponent.php";
 
     <div class="row">
     <?php
-for ($i = 0; $i < 5; $i++) {
-    mostrarPublicacao("Instalar o Git no Linux", "sudo apt install git");
+require "./mysql_connect.php";
+
+$idUsuario = $_SESSION['USER_INFO']['idUsuario'];
+$res = mysql_db_query("SELECT * FROM Postagem WHERE idUsuario  ='$idUsuario' ORDER BY idPostagem DESC");
+// var_dump($arrayMinhasPublicacoes);
+
+$arrayMinhasPublicacoes = mysqli_fetch_assoc($res);
+while($arrayMinhasPublicacoes){
+  mostrarPublicacao($arrayMinhasPublicacoes['titulo'], $arrayMinhasPublicacoes['mensagem']);
+  $arrayMinhasPublicacoes = mysqli_fetch_assoc($res);
 }
+
+
 ?>
     </div>
 
@@ -62,9 +72,9 @@ for ($i = 0; $i < 5; $i++) {
         </button>
       </div>
       <div class="modal-body">
-      <?php require ("./formulariopublicacao.php")  ?>
+      <?php require "./formulariopublicacao.php"?>
       </div>
-      
+
     </div>
   </div>
 </div>
