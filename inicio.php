@@ -50,11 +50,11 @@ require "./mysql_connect.php";
 
 $idUsuario = $_SESSION['USER_INFO']['idUsuario'];
 $res = mysql_db_query("SELECT * FROM Postagem WHERE idUsuario  ='$idUsuario' ORDER BY idPostagem DESC");
-// var_dump($arrayMinhasPublicacoes);
 
 $arrayMinhasPublicacoes = mysqli_fetch_assoc($res);
+
 while($arrayMinhasPublicacoes){
-  mostrarPublicacao($arrayMinhasPublicacoes['titulo'], $arrayMinhasPublicacoes['mensagem']);
+  mostrarPublicacao($arrayMinhasPublicacoes);
   $arrayMinhasPublicacoes = mysqli_fetch_assoc($res);
 }
 
@@ -83,8 +83,9 @@ while($arrayMinhasPublicacoes){
 </div>
 
 <script src="lib/js/jquery-3.4.1.min.js"></script>
+<script src="lib/js/popper.min.js"></script>
     <script src="lib/js/bootstrap.min.js"></script>
-    <script src="lib/js/popper.min.js"></script>
+    
     <script src="lib/js/mdb.min.js"></script>
 
 </body>
