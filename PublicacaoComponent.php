@@ -13,12 +13,12 @@ function mostrarPublicacao($postagem)
                     </button>
                     <div class='dropdown-menu dropdown-menu-right' aria-labelledby='dropdown'>
                         <div class='h6 dropdown-header'>Opções</div>
-                        <form action='editar.php' method='get' >
+                        <form action='editar.php' method='post' >
                             <input type='hidden' name='idPostagem' value='{$postagem['idPostagem']}' >
                             <button class='dropdown-item' href='#'> Editar </button >
                         </form>
 
-                        <form action='remover.php' method='get' >
+                        <form action='remover.php' method='post' >
                             <button class='dropdown-item' href='#'> Apagar </button >
                             <input type='hidden' name='idPostagem' value='{$postagem['idPostagem']}' >
                         </form>
