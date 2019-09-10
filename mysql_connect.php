@@ -33,4 +33,14 @@ function pegar_usuario($email)
         "email" => $arr['email'],
     );
 }
+
+function pegar_postagem($idPostagem)
+{
+    $arr = mysql_db_query_fetch_array("SELECT * FROM Postagem WHERE idPostagem ='$idPostagem'");
+    return array(
+        "idPostagem" => intval($arr['idPostagem']),
+        "titulo" => $arr['titulo'],
+        "mensagem" => $arr['mensagem'],
+    );
+}
 ?>
