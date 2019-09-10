@@ -18,29 +18,33 @@ require "PublicacaoComponent.php";
     <title>Command</title>
        <!-- CSS IMPORT -->
 
-       <link rel="stylesheet" href="lib/css/bootstrap.min.css">
-    <link rel="stylesheet" href="lib/css/mdb.min.css">
+      <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+      <link rel="stylesheet" href="lib/css/mdb.min.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark primary-color">
-  <a class="navbar-brand" href="#">Commands</a>
+  <a class="navbar-brand fa-lg" href="#">Commands .</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
+  <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
 
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#"  data-toggle="modal" data-target="#modalAddPublicacao">Add <span class="sr-only">(current)</span></a>
+      <li class="nav-item active d-flex align-self-center">
+        <a style="border-radius:25px;" class="nav-link " href="#"  data-toggle="modal" data-target="#modalAddPublicacao">Add <i class="fa fa-plus-circle fa-lg "></i> <span class="sr-only">(current)</span></a>
       </li>
+      
       <li class="nav-item ">
           <form action="sairsessao.php">
-            <button type="submit" class="nav-link" >Fazer Logout <span class="sr-only"></span></button>
+            <button class="nav-link btn btn-outline-light " style="border-radius:25px;position:absolute top:50% left:50%"type="submit" >Fazer Logout <span class="sr-only"></span></button>
           
         </form>
     </li>
+
 
     </ul>
   </div>
