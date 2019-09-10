@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (!isset($_SESSION["USER_INFO"])) {
+  header("location: ./pagina_erro.php");
+    
+}
+
 require ("mysql_connect.php");
 $email = $_POST["email"];
 $senha = $_POST["senha"];

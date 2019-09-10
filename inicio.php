@@ -1,6 +1,11 @@
 <?php
 session_start();
+if (!isset($_SESSION["USER_INFO"])) {
+  header("location: ./pagina_erro.php");
+}
+
 require "PublicacaoComponent.php";
+
 
 ?>
 

@@ -1,3 +1,11 @@
+
+<?php
+session_start();
+if (isset($_SESSION["USER_INFO"])) {
+    header("location: ./inicio.php");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -18,10 +26,10 @@
     <div class="container login-container">
         <div class="row">
             <div class="col-md-6 login-form-1">
-                <?php require("./formulariologin.php") ?>
+                <?php require "./formulariologin.php"?>
             </div>
             <div class="col-md-6 login-form-2">
-            <?php require ("./formulariocadastro.php")  ?>
+            <?php require "./formulariocadastro.php"?>
             </div>
         </div>
     </div>

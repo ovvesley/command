@@ -1,9 +1,12 @@
 <?php
 require "./mysql_connect.php";
+session_start();
+if (!isset($_SESSION["USER_INFO"])) {
+  header("location: ./pagina_erro.php");
+}
+
 $idPostagem = $_POST['idPostagem'];
 $postagem = pegar_postagem($idPostagem);
-var_dump($idPostagem);
-var_dump($postagem);
 
 ?>
 
@@ -34,7 +37,7 @@ var_dump($postagem);
       <div class="modal-body">
       <form method="post" action="editar.php">
             Título: <br>
-            <input type="text" class="form-control" name="titulo" value="<?php echo($postagem['mensagem']);?>"><br>
+            <input type="text" class="form-control" name="titulo" value="<?php echo($postagem['titulo']);?>"><br>
             Mensagem: <br>
             <textarea name="mensagem" class="form-control" rows="5" placeholder="Insira seu(s) comando(s)" size=60><?php echo($postagem['mensagem']); ?></textarea>
             <br><br>

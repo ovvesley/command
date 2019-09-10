@@ -1,5 +1,8 @@
 <?php
-
+session_start();
+if (!isset($_SESSION["USER_INFO"])) {
+  header("location: ./pagina_erro.php");
+}
 var_dump($_POST);
 require "./mysql_connect.php";
 $postagem = array(
