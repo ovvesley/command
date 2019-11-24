@@ -22,5 +22,5 @@ error_log($idUsuario);
 $postagem = create_post($idUsuario);
 var_dump($postagem);
 header("location: ./inicio.php");
-insert_post($postagem);
 
+insert_post($postagem);
