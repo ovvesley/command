@@ -153,9 +153,9 @@
     <script src="lib/js/mdb.min.js"></script>
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-    <script src="js/grafico1.js"></script>
-    <script src="js/grafico2.js"></script>
-    <script src="js/grafico3.js"></script>
+    <script src="grafico/grafico1.js"></script>
+    <script src="grafico/grafico2.js"></script>
+    <script src="grafico/grafico3.js"></script>
 
 
 </body>

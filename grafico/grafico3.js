@@ -1,5 +1,5 @@
 "use strict";
-function grafico1() {
+function grafico3() {
   var margin = {
       top: 40,
       right: 20,
@@ -39,7 +39,7 @@ function grafico1() {
     });
 
   var svg1 = d3
-    .select("#grafico1")
+    .select("#grafico3")
     .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -48,7 +48,7 @@ function grafico1() {
 
   svg1.call(tip);
 
-  d3.tsv("js/dataGrafico1.tsv", type, function(error, data) {
+  d3.tsv("grafico/dataGrafico3.tsv", type, function(error, data) {
     x.domain(
       data.map(function(d) {
         return d.letter;
@@ -103,4 +103,5 @@ function grafico1() {
     return d;
   }
 }
-grafico1();
+
+grafico3();

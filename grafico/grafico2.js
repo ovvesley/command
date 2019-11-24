@@ -47,7 +47,7 @@ var svg = d3
 
 svg.call(tip);
 
-d3.tsv("js/dataGrafico2.tsv", type, function(error, data) {
+d3.tsv("grafico/dataGrafico2.tsv", type, function(error, data) {
   x.domain(
     data.map(function(d) {
       return d.letter;
